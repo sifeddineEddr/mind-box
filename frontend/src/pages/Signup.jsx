@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Input from "../components/Input";
 
 export default function Signup() {
+  const navigate = useNavigate();
+
+  const OauthSignup = () => {};
+  const handleSignup = () => {};
+  const loginNavigation = () => navigate("/login");
+
   return (
     <div className="flex flex-col items-center gap-8 h-5/6 mt-8">
       <Button label="Oauth" action={OauthSignup} />
@@ -30,7 +37,3 @@ export default function Signup() {
     </div>
   );
 }
-
-const OauthSignup = () => {};
-const handleSignup = () => {};
-const loginNavigation = () => {};
