@@ -4,6 +4,12 @@ export default {
   plugins: [require("daisyui")],
   theme: {
     extend: {
+      boxShadow: {
+        "3xl": `0 0 5px #FF3427,
+        0 0 100px #C70C00,
+        0 0 30px #FF3427,
+        0 0 100px #C70C00`,
+      },
       colors: {
         brandBlue: "#0D042A",
         brandDarkBlue: "#06001B",

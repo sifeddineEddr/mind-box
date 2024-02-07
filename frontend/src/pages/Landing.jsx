@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/Button";
 import BgContainer from "../components/BgContainer";
+import ImportantButton from "../components/ImportantButton";
 
 export default function Landing() {
   const navigate = useNavigate();
@@ -16,7 +16,8 @@ export default function Landing() {
           Remember Forever.
         </p>
       </div>
-      <Button label="Open the vault" action={openVault} />
+
+      <ImportantButton label="Open the vault" action={openVault} />
     </BgContainer>
   );
 }
