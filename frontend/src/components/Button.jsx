@@ -6,7 +6,7 @@ export default function Button({ label, action }) {
     <motion.button
       whileHover={{ opacity: 0.9, scale: 1.05 }}
       whileTap={{ y: 5 }}
-      className="text-sm capitalize rounded-3xl mt-8 bg-brandRed font-semibold md:text-xl md:px-10 md:py-1 lg:text-lg"
+      className="text-sm capitalize rounded-3xl md:mt-8 bg-brandRed font-semibold md:text-xl px-10 py-1 lg:text-lg"
       onClick={action}
     >
       {label}

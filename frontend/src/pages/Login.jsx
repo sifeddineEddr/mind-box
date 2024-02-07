@@ -32,7 +32,7 @@ export default function Login() {
             <Input label="password" type="password" />
           </div>
           <Button label="login" action={handleLogin} />
-          <div className="flex gap-24 justify-between">
+          <div className="flex flex-col gap-4 md:flex-row md:gap-24 justify-between">
             <Link text="Forgot your password?" action={handleForgetPwd} />
             <Link text="Create a new account" action={signupNavigation} />
           </div>
