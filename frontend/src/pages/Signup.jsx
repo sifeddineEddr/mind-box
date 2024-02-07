@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Input from "../components/Input";
+import BgContainer from "../components/BgContainer";
+import ImportantButton from "../components/ImportantButton";
+import Link from "../components/link";
 
 export default function Signup() {
   const navigate = useNavigate();
@@ -10,30 +13,37 @@ export default function Signup() {
   const handleSignup = () => {};
   const loginNavigation = () => navigate("/login");
 
+  const label = (
+    <span className="flex items-center gap-2">
+      <img className="w-[12%]" src="/google-logo.svg" /> sign up with google
+    </span>
+  );
+
   return (
-    <div className="flex flex-col items-center gap-8 h-5/6 mt-8">
-      <Button label="Oauth" action={OauthSignup} />
-      <div className="flex gap-24 items-center">
-        <div className="flex flex-col items-start gap-8">
-          <Input label="first name" type="text" />
-          <Input label="last name" type="text" />
-        </div>
-        <div className="flex flex-col items-start gap-8">
-          <Input label="email" type="email" />
-          <Input label="password" type="password" />
-          <Input label="confirm pwd" type="password" />
+    <BgContainer>
+      <div className="flex flex-col justify-center items-center h-screen">
+        <div className="flex flex-col items-center gap-8">
+          <div className="mb-8">
+            <ImportantButton label={label} action={OauthSignup} />
+          </div>
+          <div className="flex items-center gap-4 lg:gap-40">
+            <div className="flex flex-col gap-12">
+              <Input label="first name" type="text" />
+              <Input label="last name" type="text" />
+            </div>
+            <div className="flex flex-col gap-8">
+              <Input label="email" type="email" />
+              <Input label="password" type="password" />
+              <Input label="confirm password" type="password" />
+            </div>
+          </div>
+          <Button label="sign up" action={handleSignup} />
+          <Link
+            text="Already have an account? Log in"
+            action={loginNavigation}
+          />
         </div>
       </div>
-      <Button label="sign up" action={handleSignup} />
-      <p>
-        Already have an account?
-        <span
-          className="underline font-semibold cursor-pointer"
-          onClick={loginNavigation}
-        >
-          Login
-        </span>
-      </p>
-    </div>
+    </BgContainer>
   );
 }
