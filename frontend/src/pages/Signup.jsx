@@ -26,12 +26,12 @@ export default function Signup() {
           <div className="mb-8">
             <ImportantButton label={label} action={OauthSignup} />
           </div>
-          <div className="flex items-center gap-4 lg:gap-40">
-            <div className="flex flex-col gap-12">
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12 lg:gap-40">
+            <div className="flex flex-col gap-8 md:gap-12">
               <Input label="first name" type="text" />
               <Input label="last name" type="text" />
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 md:gap-12">
               <Input label="email" type="email" />
               <Input label="password" type="password" />
               <Input label="confirm password" type="password" />
