@@ -9,7 +9,7 @@ export default function Home() {
   const booksNav = () => navigate("/books");
   return (
     <AuthBgContaier>
-      <div className="flex w-4/5 justify-around my-auto">
+      <div className="flex flex-col justify-around my-auto gap-8 md:flex-row md:w-4/5">
         <Stats label="flashcards" stat={99} navigation={flashcardsNav} />
         <Stats label="books" stat={99} navigation={booksNav} />
         <Stats label="authors" stat={99} navigation={booksNav} />
