@@ -14,6 +14,7 @@ export default {
         brandBlue: "#0D042A",
         brandDarkBlue: "#06001B",
         brandRed: "#C70C00",
+        brandDarkRed: "#4A0400",
         brandLightRed: "#FF3427",
       },
       fontFamily: {
