@@ -1,1 +1,4 @@
 flask
+flask-bcrypt
+pymongo
+load_dotenv
